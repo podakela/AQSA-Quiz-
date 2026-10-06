@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQSA Islamic Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="welcomeScreen" class="screen active">
+    <div class="welcome-card">
+      <div class="logo-wrap">
+        <div class="logo-badge">
+          <div class="logo-inner">
+            <span class="aqsa">AQSA</span>
+            <div class="crescent"></div>
+          </div>
+        </div>
+      </div>
+
+      <h1 id="appTitle">AQSA Islamic Quiz</h1>
+
+      <div class="language-panel">
+        <p id="selectLanguageLabel">Select Language</p>
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="en">English</button>
+          <button class="lang-btn" data-lang="ch">Chichewa</button>
+        </div>
+      </div>
+
+      <div class="music-panel">
+        <p id="musicLabel">Music</p>
+        <button id="musicToggle" class="toggle-btn" aria-label="Toggle music">
+          <span id="musicText">On</span>
+        </button>
+      </div>
+
+      <button id="startBtn" class="primary-btn">
+        <span id="startBtnText">Start Quiz</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="gameScreen" class="screen">
+    <header class="topbar">
+      <div class="brand-mini">
+        <span>AQSA</span>
+      </div>
+      <div class="topbar-score">
+        <span id="scoreLabel">Score</span>
+        <strong id="scoreValue">0</strong>
+      </div>
+      <button id="backToWelcome" class="ghost-btn">Home</button>
+    </header>
+
+    <main class="game-layout">
+      <aside class="sidebar">
+        <div class="panel">
+          <h3 id="topicsHeader">Topics</h3>
+          <div id="categoryList" class="category-list"></div>
+        </div>
+      </aside>
+
+      <section class="quiz-panel">
+        <div class="stats">
+          <div>
+            <span id="progressText">Question</span>
+            <strong id="progressValue">1 / 1</strong>
+          </div>
+          <div>
+            <span id="pointsText">Points</span>
+            <strong id="pointsValue">0</strong>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div id="categoryBadge" class="category-badge">Aqeedah</div>
+          <h2 id="questionText">Question</h2>
+
+          <div id="answerList" class="answer-list"></div>
+
+          <div id="resultBox" class="result-box hidden"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <audio id="bgMusic" loop></audio>
+  <audio id="correctSound" preload="auto"></audio>
+  <audio id="wrongSound" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
